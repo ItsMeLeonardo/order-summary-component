@@ -41,7 +41,7 @@ body {
     justify-content: center;
     align-items: center;
     padding: 1rem;
-    background: url('#');
+    background: url('../images/pattern-background-mobile.svg') center/cover;
 }
 body::after {
     content: '';
@@ -56,13 +56,17 @@ body::after {
     position: relative;
     z-index: 1;
     background: var(--very-pale-blue);
-    padding: 1.5rem;
+    /* padding: 1.5rem; */
     border-radius: var(--big-radius);
     width: 20rem;
+    overflow: hidden;
 }
 
 .card__hero {
-   background: url(#); 
+    border-radius: var(--big-radius) var(--big-radius) 0 0;
+}
+.card__img {
+    width: 100%;
 }
 
 .card__info {
@@ -71,6 +75,7 @@ body::after {
     align-items: center;
     text-align: center;
     gap: 1rem;
+    padding: 1.5rem;
 }
 .card__title {
     font-weight: 900;
@@ -88,8 +93,14 @@ body::after {
     padding: 1rem;
     border-radius: var(--small-radius);
 }
+.card__icon {
+    background: url('../images/icon-music.svg');
+    object-fit: cover;
+    width: 3rem;
+    height: 3rem;
+}
 .card__plan {
-    padding-right: 3rem;
+    padding-right: 2rem;
 }
 .card__plan-title {
     font-weight: 700;
