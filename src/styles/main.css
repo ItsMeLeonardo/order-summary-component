@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap');
+:root {
+    /* ---- colors ---- */
+    /* Primary */
+    --pale-blue: hsl(225, 100%, 94%);
+    --bright-blue: hsl(245, 75%, 52%);
+    
+    /* neustral */
+    --red:#1f2f56;
+    --very-pale-blue: hsl(225, 100%, 98%);
+    --desaturated-blue: hsl(224, 23%, 55%);
+    --dark-blue: hsl(223, 47%, 23%);
+
+    /* my colors */
+    --my-pale-blue: hsla(225, 100%, 94%, 0.4);
+    --bright-blue-shadown: hsla(245, 75%, 52%, 0.226);
+
+    /* buttons */
+    --big-radius: 1.5rem;
+    --small-radius: .75rem;
+
+}
+
+*, ::after, ::before {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Red Hat Display', sans-serif;
+}
+button {
+    border: none;
+    background-color: var(--pale-blue);
+}
+p {font-size: 1rem;}
+
+body {
+    position: relative;
+    min-width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    background: url('#');
+}
+body::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: var(--pale-blue);
+    mix-blend-mode: screen;
+}
+/* ---- styles of card ----*/
+.card {
+    position: relative;
+    z-index: 1;
+    background: var(--very-pale-blue);
+    padding: 1.5rem;
+    border-radius: var(--big-radius);
+    width: 20rem;
+}
+
+.card__hero {
+   background: url(#); 
+}
+
+.card__info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 1rem;
+}
+.card__title {
+    font-weight: 900;
+    color: var(--dark-blue);
+}
+.card__text {
+    color: var(--desaturated-blue);
+}
+.card__description {
+    display: flex;
+    width: 105%;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--my-pale-blue);
+    padding: 1rem;
+    border-radius: var(--small-radius);
+}
+.card__plan {
+    padding-right: 3rem;
+}
+.card__plan-title {
+    font-weight: 700;
+    color: var(--dark-blue);
+}
+.card__plan-price {
+    color: var(--desaturated-blue);
+}
+.card__link {
+    color: var(--bright-blue);
+    transition: opacity .5s ease-in-out;
+}
+.card__link:hover {
+    opacity: .75;
+}
+
+.btn {
+    width: 100%;
+    padding: 1rem;
+    font-size: 1rem;
+    font-weight: 700;
+    border-radius: var(--small-radius);
+    background: transparent;
+    cursor: pointer;
+}
+.btn-primary {
+    background: var(--bright-blue);
+    color: var(--pale-blue);
+    box-shadow: 0rem 1rem 1rem -.55rem var(--bright-blue-shadown);
+    transition: box-shadow .5s ease-in-out, opacity .5s ease-in-out;
+}
+.btn-primary:hover {
+    box-shadow: none;
+    opacity: .75;
+}
+.btn-primary:active {
+    opacity: 1;
+    box-shadow: inset 12px 12px 21px #3224c7,
+            inset -12px -12px 21px #3e2ef9;
+}
+
+.btn-text {
+    color: var(--desaturated-blue);
+    transition: color .5s ease-in-out, text-shadow;
+}
+.btn-text:hover {
+    color: var(--dark-blue);
+}
+
