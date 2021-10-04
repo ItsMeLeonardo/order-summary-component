@@ -150,3 +150,9 @@ body::after {
     color: var(--dark-blue);
 }
 
+@media screen and (min-width: 1024px) {
+    body {
+        background: url('../images/pattern-background-desktop.svg') right top no-repeat;
+        object-fit: cover;
+    }
+}
